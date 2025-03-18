@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+
+token:
+  expiration_time: 86400000
+  secret: '{cipher}AYCen2mn2fk9/dJmQQD3wkbtUmGolVvhnL5ZmdEvA9+ZB12UAG7EJVC1SP5OnJpPu6sRIDlf9NSjyEHSB8f2Y1d8kzhkhs36GrhlqDBXblZqBUCz3I0xDB2c0PAZ9PW+LLobXsyd2CxPLdAiiGsovTRV3FQt9vTZSQbhWWUyJGnBN1sGL8vgAo8eW6m6fCpWUyAuqDol6MV031xOJlluhuwsFZKlvlY6PCJit1CkS5rutUYqXF74XwC/gZ4Oe6sRqYndRclkFCA3eFT0ak+JuiOIcsTXNshyxKMg4X2P3VHcRoF6R0gxUFblwTMfoJG0cNBjf0QcXktG+Mf23BGtmLy97Tq6B0kpJ8D+DInK0FquzKl5NR5Ax9eGXmehEdAFwBHlDo6NwMfhC+IBXp+evB3EUHXXnWXGHuAILuhMR/S8PLutZ+/4suRQqxLmSj6DjRPhDNy7ves1rzumfx94Vt4PB5aLzDgj7fxNtjQH5NOOPOqhgryRBdBWJUi5SvhSORAvQGfPuLUgnoFxE19iLjqb50K7PXaAawpAADKE9OV347nCVifI6o4sl6CzIexQhwD2CNDU0J9b+oz5OyZWKy5R1aQtNQsSFW/x/Bt0/5LU1w=='
+gateway:
+  ip: 127.0.0.1
+
+order-service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    order-is-empty: User's order is empty.
